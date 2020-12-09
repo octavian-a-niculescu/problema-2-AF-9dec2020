@@ -1,0 +1,15 @@
+problema 2:
+->sortam crescator ambii vectori, apoi vom face produsul dintre elementele din multimea A de la pozitia (m-n) pana la m si elementele din multimea C
+->exemplu (ca sa se inteleaga mai bine ideea):
+pt C = 1 9 4 2 m = 4
+A = 2 3 1 n = 3
+se sorteaza crescator =>
+C = 1 2 4 9
+A = 1 2 3
+m-n=1 => Exp = C[(m-n)]*A[0] + C[m-n+1]*A[1] + C[m-n+2]*A[2]
+->obtinem complexitatea O(n+m). pt n=m => complexitatea este O(n), iar pt n<m => complexitatea este O(m)
+->cazuri particulare:
+*n=0 => Exp = 0
+*n=1 => Exp = A[0] * C[m]
+->este greedy deoarece din 2 multimi de candidati, pe care urmeaza sa le sortez, aleg cate un optim local pt fiecare situatie.
+->se poate demonstra inductiv (dar imi e greu pe PC). daca nu am mai alege cei mai mari n termeni din C (si in ordine crescatoare) nu am mai obtine expresia maxima.
